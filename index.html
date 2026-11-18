@@ -187,7 +187,7 @@ home();
 /* ---------- Memory items: sequence drill ---------- */
 function mrec(id){const k='M:'+id;return P[k]||(P[k]={s:0,c:0,l:null,f:0})}
 function memStats(){const M=DB.memory||[];let seen=0,ok=0,no=0;M.forEach(m=>{const r=P['M:'+m.id];if(r&&r.s){seen++;if(r.l===1)ok++;else if(r.l===0)no++}});return{seen,ok,no}}
-let MD=null;
+var MD=null;
 function memHome(){
   stopTick();Q=null;MD=null;window.scrollTo(0,0);
   const M=DB.memory||[], ms=memStats();
